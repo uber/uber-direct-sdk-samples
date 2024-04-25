@@ -1,0 +1,104 @@
+/* Reset.css */
+
+/* Box sizing rules */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+dt {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Responsive images */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Reset form styles */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Remove default button styles */
+button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+/* Remove the default focus styles */
+button:focus {
+    outline: none;
+}
+
+/* Remove the default focus styles for some input types */
+input[type="search"] {
+    appearance: none;
+    outline: none;
+}
+
+/* Reset anchor styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Remove dotted outline on focused links */
+a:focus {
+    outline: none;
+}
+
+/* Remove default table spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'UberMove';
+    src: url('../fonts/UberMove-400.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
