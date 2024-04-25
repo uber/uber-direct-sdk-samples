@@ -1,0 +1,78 @@
+// TODO: Replace with '@uber-direct/auth'
+import { getAccessToken } from '../../../dist/auth/index.js';
+// TODO: Replace with '@uber-direct/deliveries'
+import { createDeliveriesClient } from '../../../dist/deliveries/index.js';
+
+(async () => {
+  const token = await getAccessToken();
+  const deliveriesClient = createDeliveriesClient(token);
+  const deliveryRequest = {
+    pickup_name: 'Store Name',
+    pickup_address: JSON.stringify({
+      street_address: ['425 Market St'],
+      city: 'San Francisco',
+      state: 'CA',
+      zip_code: '94105',
+      country: 'US',
+    }),
+    pickup_notes: 'Follow big green signs in the parking lot',
+    pickup_phone_number: '+14155551212',
+    external_store_id: 'myStore123',
+    dropoff_name: 'Customer Name',
+    dropoff_address: JSON.stringify({
+      street_address: ['201 3rd St'],
+      city: 'San Francisco',
+      state: 'CA',
+      zip_code: '94103',
+      country: 'US',
+    }),
+    dropoff_notes: 'apt 45',
+    dropoff_phone_number: '+14155551212', // e164 format
+    deliverable_action: 'deliverable_action_meet_at_door', // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
+    undeliverable_action: 'return', // Possible values: return, leave_at_door, discard
+    manifest_items: [
+      {
+        name: 'iPhone',
+        quantity: 1,
+        size: 'small',
+      },
+      {
+        name: 'iPad',
+        quantity: 1,
+        size: 'medium',
+      },
+    ],
+    manifest_reference: 'REF000000',
+    manifest_total_value: 1000, // Must be in cents
+    pickup_verification: {
+      picture: true,
+    },
+    dropoff_verification: {
+      barcodes: [
+        {
+          value: 'Code1',
+          type: 'QR', // Possible values:  "CODE39" "CODE39_FULL_ASCII" "CODE128" "QR"
+        },
+        {
+          value: 'Code2',
+          type: 'QR',
+        },
+        {
+          value: 'CodeN',
+          type: 'QR',
+        },
+      ],
+    },
+    return_verification: {
+      picture: true,
+    },
+    test_specifications: {
+      robo_courier_specification: {
+        mode: 'auto',
+      },
+    },
+  };
+
+  const delivery = await deliveriesClient.createDelivery(deliveryRequest);
+  console.log(`Your delivery ID is: ${delivery.id} (${delivery.tracking_url})`);
+})();

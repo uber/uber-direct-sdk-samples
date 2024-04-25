@@ -1,0 +1,34 @@
+{
+  "name": "uber-direct-js-sdk-examples",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "lint": "next lint",
+    "start": "next start",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
+    "@types/baseui": "^8.0.0",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react-swc": "^3.3.0",
+    "baseui": "^14.0.0",
+    "eslint-config-next": "^14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "next": "^14.1.0",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-places-autocomplete": "^7.3.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "styletron-engine-monolithic": "^1.0.0",
+    "styletron-react": "^6.1.0",
+    "typescript": "^5.0.4",
+    "vitest": "^1.2.2"
+  }
+}

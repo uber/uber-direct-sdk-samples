@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended" // Add this line
+  ],
+  "plugins": [
+    "react",
+    "prettier" // Ensure this is added
+  ],
+  "rules": {
+    // Your custom rules
+    "prettier/prettier": ["error", { "jsxSingleQuote": false }] // Enforce double quotes in JSX
+  }
+}
