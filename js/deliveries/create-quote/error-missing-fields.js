@@ -1,5 +1,5 @@
-// TODO: Replace with '@uber-direct'
-import { getAccessToken, createDeliveriesClient } from '../../../dist/index.js';
+import { getAccessToken } from "uber-direct/auth";
+import { createDeliveriesClient } from "uber-direct/deliveries";
 
 (async () => {
   const token = await getAccessToken();
@@ -7,11 +7,11 @@ import { getAccessToken, createDeliveriesClient } from '../../../dist/index.js';
 
   const quoteReq = {
     pickup_address: JSON.stringify({
-      street_address: ['425 Market St'],
-      city: 'San Francisco',
-      state: 'CA',
-      zip_code: '94105',
-      country: 'US',
+      street_address: ["425 Market St"],
+      city: "San Francisco",
+      state: "CA",
+      zip_code: "94105",
+      country: "US",
     }),
   };
   try {
@@ -21,6 +21,8 @@ import { getAccessToken, createDeliveriesClient } from '../../../dist/index.js';
     console.error(`The error status is: ${error.status}`);
     console.error(`The error code is: ${error.code}`);
     console.error(`The error message is: ${error.message}`);
-    console.error(`The error details are: ${JSON.stringify(error.metadata, null, 2)}`);
+    console.error(
+      `The error details are: ${JSON.stringify(error.metadata, null, 2)}`
+    );
   }
 })();

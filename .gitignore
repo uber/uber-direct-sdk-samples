@@ -1,0 +1,4 @@
+.DS_store
+dist
+js/node_modules
+next.js/node_modules

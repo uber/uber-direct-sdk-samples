@@ -10,10 +10,10 @@
   "keywords": [],
   "author": "Uber",
   "license": "ISC",
-  "dependencies": {
-    "uber": "file:.."
-  },
   "engines": {
-    "node": "18.12.1"
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "uber-direct": "^0.1.4"
   }
 }

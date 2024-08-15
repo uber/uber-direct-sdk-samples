@@ -1,5 +1,5 @@
-// TODO: Replace with '@uber-direct'
-import { getAccessToken, createOrganizationsClient } from '../../../dist/index.js';
+import { getAccessToken } from "uber-direct/auth";
+import { createOrganizationsClient } from "uber-direct/organizations";
 
 (async () => {
   const token = await getAccessToken();
@@ -8,14 +8,14 @@ import { getAccessToken, createOrganizationsClient } from '../../../dist/index.j
   try {
     const createOrgReq = {
       info: {
-        name: 'Test Organization',
-        billing_type: 'BILLING_TYPE_CENTRALIZED',
+        name: "Test Organization",
+        billing_type: "BILLING_TYPE_CENTRALIZED",
       },
       hierarchy_info: {
-        parent_organization_id: '4fe73ff8-0c9a-5ca3-aa2f-17ef3a8487d5',
+        parent_organization_id: "4fe73ff8-0c9a-5ca3-aa2f-17ef3a8487d5",
       },
       options: {
-        onboarding_invite_type: 'ONBOARDING_INVITE_TYPE_EMAIL',
+        onboarding_invite_type: "ONBOARDING_INVITE_TYPE_EMAIL",
       },
     };
 
