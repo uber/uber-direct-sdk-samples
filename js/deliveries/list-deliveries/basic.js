@@ -1,5 +1,5 @@
-// TODO: Replace with '@uber-direct'
-import { getAccessToken, createDeliveriesClient } from '../../../dist/index.js';
+import { getAccessToken } from "uber-direct/auth";
+import { createDeliveriesClient } from "uber-direct/deliveries";
 
 (async () => {
   const token = await getAccessToken();
