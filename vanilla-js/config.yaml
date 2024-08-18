@@ -1,0 +1,16 @@
+examples:
+  auth-basic:
+    filename: "./examples/auth/basic.js"
+    title: "Authentication: Basic"
+    description: |
+      This script demonstrates how to authenticate and retrieve an Uber access token.
+
+      See our guide for more info: https://developer.uber.com/docs/deliveries/guides/authentication
+
+  deliveries-create-quote:
+    filename: "./examples/deliveries/create-quote/basic.js"
+    title: "Deliveries: Cancel Quote"
+    description: |
+      This script demonstrates how to create a delivery quote.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post

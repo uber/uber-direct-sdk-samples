@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "auth-basic": "echo \"=== Authentication Basic Example ===\" && bat --theme=\"TwoDark\" ./auth/basic.js && node ./auth/basic.js"
+    "show-code": "echo \"=== $TITLE ===\" && node ./scripts/typewriter.js \"$DESCRIPTION\" && bat --language=js --theme=\"OneHalfDark\" $FILENAME",
+    "run-example": "npm run --silent show-code && node $FILENAME",
+    "example": "node ./scripts/run-example.js",
+    "help": "node ./scripts/help.js"
   },
   "keywords": [],
   "author": "Uber",
@@ -14,6 +17,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "uber-direct": "^0.1.5"
   }
 }
