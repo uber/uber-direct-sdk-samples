@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "auth-basic": "echo \"=== Authentication Basic Example ===\" && bat --theme=\"TwoDark\" ./auth/basic.js && node ./auth/basic.js"
   },
   "keywords": [],
   "author": "Uber",
@@ -14,6 +14,6 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "uber-direct": "^0.1.4"
+    "uber-direct": "^0.1.5"
   }
 }

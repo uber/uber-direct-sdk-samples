@@ -5,6 +5,7 @@
 - Auth
   - Get Access Token
     - [Basic](auth/basic.js)
+      - `npm run auth-basic`
 - Deliveries
   - Cancel Delivery
     - [Basic](deliveries/cancel-delivery/basic.js)
