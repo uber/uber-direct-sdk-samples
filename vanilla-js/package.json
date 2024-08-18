@@ -7,8 +7,8 @@
   "scripts": {
     "show-code": "echo \"=== $TITLE ===\" && node ./scripts/typewriter.js \"$DESCRIPTION\" && bat --language=js --theme=\"OneHalfDark\" $FILENAME",
     "run-example": "npm run --silent show-code && node $FILENAME",
-    "auth-basic": "TITLE='Authentication: Basic' DESCRIPTION='This script demonstrates how to authenticate and retrieve an access token.' FILENAME=./auth/basic.js npm run run-example",
-    "next-example": "TITLE='Deliveries: Cancel Delivery' DESCRIPTION='This script shows how to cancel a delivery using the API.' FILENAME=./auth/next.js npm run run-example"
+    "example": "node ./scripts/run-example.js",
+    "help": "node ./scripts/help.js"
   },
   "keywords": [],
   "author": "Uber",
@@ -17,6 +17,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "uber-direct": "^0.1.5"
   }
 }
