@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "auth-basic": "echo \"=== Authentication Basic Example ===\" && bat --theme=\"TwoDark\" ./auth/basic.js && node ./auth/basic.js"
+    "show-code": "echo \"=== $TITLE ===\" && node ./scripts/typewriter.js \"$DESCRIPTION\" && bat --language=js --theme=\"OneHalfDark\" $FILENAME",
+    "run-example": "npm run --silent show-code && node $FILENAME",
+    "auth-basic": "TITLE='Authentication: Basic' DESCRIPTION='This script demonstrates how to authenticate and retrieve an access token.' FILENAME=./auth/basic.js npm run run-example",
+    "next-example": "TITLE='Deliveries: Cancel Delivery' DESCRIPTION='This script shows how to cancel a delivery using the API.' FILENAME=./auth/next.js npm run run-example"
   },
   "keywords": [],
   "author": "Uber",
