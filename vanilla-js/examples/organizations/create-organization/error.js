@@ -1,28 +1,29 @@
 import { getAccessToken } from "uber-direct/auth";
 import { createOrganizationsClient } from "uber-direct/organizations";
 
-(async () => {
-  const token = await getAccessToken();
-  const organizationsClient = createOrganizationsClient(token);
 
-  try {
+getAccessToken()
+  .then((token) => {
+    const organizationsClient = createOrganizationsClient(token);
     const createOrgReq = {
       info: {
         name: "Test Organization",
-        billing_type: "BILLING_TYPE_CENTALIZED", // This is mispelled
+        billing_type: "BILLING_TYPE_CENTALIZED", //This is misspelled
       },
       hierarchy_info: {
-        parent_organization_id: "4fe73ff8-0c9a-5ca3-aa2f-17ef3a8487d5",
+        parent_organization_id: "ORG_ID", //Replace with own before running example
       },
       options: {
         onboarding_invite_type: "ONBOARDING_INVITE_TYPE_EMAIL",
       },
     };
 
-    const resp = await organizationsClient.createOrganization(createOrgReq);
+    return organizationsClient.createOrganization(createOrgReq);
+  })
+  .then((resp) => {
     console.log(`Your organization ID is: ${resp.organization_id}`);
-  } catch (e) {
+  })
+  .catch((e) => {
     // TODO: Handle errors better
     console.log(e);
-  }
-})();
+  });

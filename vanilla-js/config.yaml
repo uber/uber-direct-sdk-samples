@@ -9,8 +9,40 @@ examples:
 
   deliveries-create-quote:
     filename: "./examples/deliveries/create-quote/basic.js"
-    title: "Deliveries: Cancel Quote"
+    title: "Deliveries: Create Quote"
     description: |
       This script demonstrates how to create a delivery quote.
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+
+  organization-create-org:
+    filename: "./examples/organizations/create-organization/basic.js"
+    title: "Organization: Create Organization"
+    description: |
+      This script demonstrates how to create a organization with centralized billing.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+
+  organization-create-org-decentralized:
+    filename: "./examples/organizations/create-organization/decentralized.js"
+    title: "Organization: Create Organization Decentrilized"
+    description: |
+      This script demonstrates how to create a organization with decentralized billing.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+
+  organization-get-org:
+    filename: "./examples/organizations/get-organization/basic.js"
+    title: "Organization: Get Organization"
+    description: |
+      This script demonstrates how to retrive the information of an organization.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+
+  organization-create-error:
+    filename: "./examples/organizations/create-organization/error.js"
+    title: "Organization: Create Organization - Error"
+    description: |
+      This script demonstrates how to errors are return on the organization endpoint.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
