@@ -1,13 +1,18 @@
 import { getAccessToken } from "uber-direct/auth";
 import { createDeliveriesClient } from "uber-direct/deliveries";
 
-(async () => {
-  const token = await getAccessToken();
-  const deliveriesClient = createDeliveriesClient(token);
-  const deliveryId = "del_pEZlmh05Swev6MIcLqTg1A";
-  const delivery = await deliveriesClient.getDelivery(deliveryId);
-  console.log(delivery);
-  console.log(
-    `Your delivery status is: ${delivery.status} (Order ID: ${delivery.tracking_url})`
-  );
-})();
+getAccessToken()
+  .then((token) => {
+    const deliveriesClient = createDeliveriesClient(token);
+    const deliveryId = "del_i0ZvVMwwSNOmmctW7UraPA";
+    return deliveriesClient.getDelivery(deliveryId);
+  })
+  .then((delivery) => {
+    console.log(delivery);
+    console.log(
+      `Your delivery status is: ${delivery.status} (Order ID: ${delivery.tracking_url})`
+    );
+  })
+  .catch((error) => {
+    console.error("Error fetching delivery:", error);
+  });

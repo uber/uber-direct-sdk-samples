@@ -6,15 +6,7 @@ examples:
       This script demonstrates how to authenticate and retrieve an Uber access token.
 
       See our guide for more info: https://developer.uber.com/docs/deliveries/guides/authentication
-
-  deliveries-create-quote:
-    filename: "./examples/deliveries/create-quote/basic.js"
-    title: "Deliveries: Create Quote"
-    description: |
-      This script demonstrates how to create a delivery quote.
-
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
-
+##Organization Examples
   organization-create-org:
     filename: "./examples/organizations/create-organization/basic.js"
     title: "Organization: Create Organization"
@@ -46,3 +38,58 @@ examples:
       This script demonstrates how to errors are return on the organization endpoint.
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+
+##Deliveries Examples
+  deliveries-create-quote:
+    filename: "./examples/deliveries/create-quote/basic.js"
+    title: "Deliveries: Create Quote"
+    description: |
+      This script demonstrates how to create a delivery quote.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-create-quote-error:
+    filename: "./examples/deliveries/create-quote/error-missing-fields.js"
+    title: "Deliveries: Create Quote - Error"
+    description: |
+      This script demonstrates how errors are return on a delivery quote.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-cancel-delivery:
+    filename: "./examples/deliveries/cancel-delivery/basic.js"
+    title: "Deliveries: Cancel Delivery"
+    description: |
+      This script demonstrates how to cancel a delivery
+
+      See our docs for more info:
+  deliveries-get-delivery:
+    filename: "./examples/deliveries/get-delivery/basic.js"
+    title: "Deliveries: Get Delivery"
+    description: |
+      This script demonstrates how to Get a single delivery
+
+      See our docs for more info:
+  deliveries-list-delivery:
+    filename: "./examples/deliveries/list-deliveries/basic.js"
+    title: "Deliveries: List Deliveries"
+    description: |
+      This script demonstrates how to List the last deliveries that belongs to your customer_id
+
+      See our docs for more info:
+  deliveries-update-delivery:
+    filename: "./examples/deliveries/update-delivery/basic.js"
+    title: "Deliveries: Update DeliverY"
+    description: |
+      This script demonstrates how to update one delivery
+  deliveries-pod-delivery:
+    filename: "./examples/deliveries/proof-of-delivery/basic.js"
+    title: "Deliveries: PoD Delivery"
+    description: |
+      This script demonstrates how to update one delivery
+      See our docs for more info:
+  deliveries-create-delivery:
+    filename: "./examples/deliveries/create-delivery/basic.js"
+    title: "Deliveries: Create Delivery"
+    description: |
+      This script demonstrates
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
