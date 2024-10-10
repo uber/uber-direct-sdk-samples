@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getAccessToken } from "../../../../../../dist/auth/index";
-import { createDeliveriesClient } from "../../../../../../dist/deliveries/index";
+import { getAccessToken, createDeliveriesClient } from 'uber-direct';
+
 
 export default async function handler(
   req: NextApiRequest,

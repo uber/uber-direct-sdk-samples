@@ -29,6 +29,7 @@
     "styletron-engine-monolithic": "^1.0.0",
     "styletron-react": "^6.1.0",
     "typescript": "^5.0.4",
+    "uber-direct": "^0.1.7",
     "vitest": "^1.2.2"
   }
 }

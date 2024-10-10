@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getAccessToken } from "../../../../../../dist/auth/index";
+import { getAccessToken } from 'uber-direct';
+
 
 export default async function handler(
   req: NextApiRequest,
