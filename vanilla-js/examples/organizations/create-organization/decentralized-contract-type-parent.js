@@ -27,7 +27,7 @@ getAccessToken()
         },
       },
       hierarchy_info: {
-        parent_organization_id: "400be0b7-b1b9-4a51-ad93-18bbb86d94d3",
+        parent_organization_id: "ORG_ID", //Replace with own before running example
       },
       options: {
         onboarding_invite_type: "ONBOARDING_INVITE_TYPE_EMAIL",
