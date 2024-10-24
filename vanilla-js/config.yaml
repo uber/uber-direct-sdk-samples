@@ -25,9 +25,17 @@ examples:
 
   organization-create-org-decentralized:
     filename: "./examples/organizations/create-organization/decentralized.js"
-    title: "Organization: Create Organization Decentrilized"
+    title: "Organization: Create Organization Decentralized"
     description: |
       This script demonstrates how to create a organization with decentralized billing.
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+
+  organization-create-org-decentralized-contract-type-parent:
+    filename: "./examples/organizations/create-organization/decentralized-contract-type-parent.js"
+    title: "Organization: Create Organization Decentralized with Contract Type Parent"
+    description: |
+      This script demonstrates how to create a organization with decentralized billing, and contract type parent.
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
 
