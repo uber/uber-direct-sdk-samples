@@ -37,6 +37,11 @@ This will:
 1. Show the code with syntax highlighting.
 1. Execute the example script.
 
+You can also run the examples with:
+
+```bash
+node examples/deliveries/create-quote/basic.js
+```
 
 ## Viewing Available Examples
 

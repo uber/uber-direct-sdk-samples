@@ -29,7 +29,7 @@ examples:
     description: |
       This script demonstrates how to retrive the information of an organization.
 
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/org#tag/Organizations/operation/GetOrg
 
   organization-create-error:
     filename: "./examples/organizations/create-organization/error.js"
@@ -60,36 +60,67 @@ examples:
     description: |
       This script demonstrates how to cancel a delivery
 
-      See our docs for more info:
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries~1%7Bdelivery_id%7D~1cancel/post
   deliveries-get-delivery:
     filename: "./examples/deliveries/get-delivery/basic.js"
     title: "Deliveries: Get Delivery"
     description: |
       This script demonstrates how to Get a single delivery
 
-      See our docs for more info:
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries/get
   deliveries-list-delivery:
     filename: "./examples/deliveries/list-deliveries/basic.js"
     title: "Deliveries: List Deliveries"
     description: |
       This script demonstrates how to List the last deliveries that belongs to your customer_id
 
-      See our docs for more info:
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries/get
   deliveries-update-delivery:
     filename: "./examples/deliveries/update-delivery/basic.js"
     title: "Deliveries: Update DeliverY"
     description: |
       This script demonstrates how to update one delivery
+
+       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries~1%7Bdelivery_id%7D/post
   deliveries-pod-delivery:
     filename: "./examples/deliveries/proof-of-delivery/basic.js"
     title: "Deliveries: PoD Delivery"
     description: |
       This script demonstrates how to update one delivery
-      See our docs for more info:
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries~1%7Bdelivery_id%7D~1proof-of-delivery/post
   deliveries-create-delivery:
     filename: "./examples/deliveries/create-delivery/basic.js"
     title: "Deliveries: Create Delivery"
     description: |
-      This script demonstrates
+      This script demonstrates how to create a basic delivery in an account level
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-create-delivery-org:
+    filename: "./examples/deliveries/create-delivery/basic-org.js"
+    title: "Deliveries: Create Delivery in a organization level"
+    description: |
+      This script demonstrates how to create a delivery in a organization (i.e: Aggregators with more that one organization)
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-create-delivery-verification:
+    filename: "./examples/deliveries/create-delivery/verifications-basic.js"
+    title: "Deliveries: Create Delivery with a verification in 2-waypoint"
+    description: |
+      This script demonstrates how to create a delivery in a organization using a basic verification in pickup and dropoff
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-create-delivery-verification-pincode:
+    filename: "./examples/deliveries/create-delivery/verifications-pincode.js"
+    title: "Deliveries: Create Delivery with a pincode verification at dropoff"
+    description: |
+      This script demonstrates how to create a delivery using a pincode verification at dropoff
+
+      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  deliveries-create-delivery-windows:
+    filename: "./examples/deliveries/create-delivery/delivery-windows-preptime.js"
+    title: "Deliveries: Create Delivery with pickup & dropoff windows"
+    description: |
+      This script demonstrates how to create a delivery using pickup & dropoff windows with 15min of preptime
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
