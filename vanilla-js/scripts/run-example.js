@@ -27,4 +27,9 @@ process.env.DESCRIPTION = example.description;
 process.env.FILENAME = example.filename;
 
 // Run the example
-execSync("npm run --silent run-example", { stdio: "inherit" });
+try {
+  execSync("npm run --silent run-example", { stdio: "inherit", timeout: 20000 }); // 20-second timeout
+} catch (error) {
+  console.error("Error running example script:", error);
+  process.exit(1);
+}
