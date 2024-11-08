@@ -1,16 +1,21 @@
 import { getAccessToken } from "uber-direct/auth";
 import { createDeliveriesClient } from "uber-direct/deliveries";
 
-(async () => {
-  const token = await getAccessToken();
-  const deliveriesClient = createDeliveriesClient(token);
-  const deliveryId = "del_LsdsanlbSYuGz9avuB-wDg";
-  const req = {
-    tipByCustomer: 1000,
-  };
+getAccessToken()
+  .then((token) => {
+    const deliveriesClient = createDeliveriesClient(token);
+    const deliveryId = "del_i0ZvVMwwSNOmmctW7UraPA";
+    const req = {
+      tipByCustomer: 1000,
+    };
 
-  const delivery = await deliveriesClient.updateDelivery(deliveryId, req);
-  console.log(
-    `Your delivery tip is: ${delivery.tip} (Order ID: ${delivery.trackingUrl})`
-  );
-})();
+    return deliveriesClient.updateDelivery(deliveryId, req);
+  })
+  .then((delivery) => {
+    console.log(
+      `Your delivery fee is: ${delivery.fee} (Order ID: ${delivery.tracking_url})`
+    );
+  })
+  .catch((error) => {
+    console.error("Error updating delivery tip:", error);
+  });

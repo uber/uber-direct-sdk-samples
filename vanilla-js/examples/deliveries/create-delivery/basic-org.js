@@ -1,9 +1,9 @@
 import { getAccessToken } from "uber-direct/auth";
 import { createDeliveriesClient } from "uber-direct/deliveries";
 
-(async () => {
+getAccessToken()
+  .then((token) => {
   const customer_id = "{YOUR ORG CUSTOMER_ID}";
-  const token = await getAccessToken();
   const deliveriesClient = createDeliveriesClient(token, customer_id);
   const deliveryRequest = {
     pickup_name: "Store Name",
@@ -41,7 +41,7 @@ import { createDeliveriesClient } from "uber-direct/deliveries";
         size: "medium",
       },
     ],
-    manifest_reference: "REF0000001",
+    manifest_reference: "REF0000001-1",
     manifest_total_value: 1000, // Must be in cents
     test_specifications: {
       robo_courier_specification: {
@@ -49,6 +49,12 @@ import { createDeliveriesClient } from "uber-direct/deliveries";
       },
     },
   };
-  const delivery = await deliveriesClient.createDelivery(deliveryRequest);
-  console.log(`Your delivery ID is: ${delivery.id} (${delivery.tracking_url})`);
-})();
+  return deliveriesClient.createDelivery(deliveryRequest);
+})
+.then((delivery) => {
+    console.log(`Your delivery ID is: ${delivery.id} (${delivery.tracking_url})`
+    );
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
