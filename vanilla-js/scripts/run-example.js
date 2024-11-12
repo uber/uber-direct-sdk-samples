@@ -27,7 +27,6 @@ process.env.DESCRIPTION = example.description;
 process.env.FILENAME = example.filename;
 
 // Run the example
-// removed internal npm call to run-example and instead added the commands directly here aas env variables are not getting passed"
 try {
   execSync("echo \"=== $TITLE ===\" && node ./scripts/typewriter.js \"$DESCRIPTION\" && bat --language=js --theme=\"OneHalfDark\" $FILENAME && node $FILENAME", { stdio: "inherit", timeout: 20000 }); // 20-second timeout
 } catch (error) {
