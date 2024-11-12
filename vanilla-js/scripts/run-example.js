@@ -28,7 +28,7 @@ process.env.FILENAME = example.filename;
 
 // Run the example
 try {
-  execSync("npm run --silent run-example", { stdio: "inherit", timeout: 20000 }); // 20-second timeout
+  execSync("echo \"=== $TITLE ===\" && node ./scripts/typewriter.js \"$DESCRIPTION\" && bat --language=js --theme=\"OneHalfDark\" $FILENAME && node $FILENAME", { stdio: "inherit", timeout: 20000 }); // 20-second timeout
 } catch (error) {
   console.error("Error running example script:", error);
   process.exit(1);
