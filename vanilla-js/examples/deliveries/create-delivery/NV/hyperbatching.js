@@ -13,13 +13,18 @@ getAccessToken()
       zip_code: "94105",
       country: "US",
     }),
-    pickup_latitude: 40.7066745,
-    pickup_longitude: -74.0071976,
+    pickup_latitude: 37.79162, 
+    pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
     external_store_id: "myStore123",
     pickup_verification: {
-      picture: true
+      barcodes:[
+         {
+            type:"QR",
+            value:"122786607478-1"
+         }
+      ]
     },
     dropoff_name: "Customer Name",
     dropoff_address: JSON.stringify({
@@ -35,21 +40,52 @@ getAccessToken()
     dropoff_phone_number: "+14155551212", // e164 format
     deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
     dropoff_verification: {
-      pincode: {
-        enabled: true,
-        type: "random"
-      },
+      picture:true,
+      barcodes:[
+          {
+            type:"QR",
+            value:"122786607478-1"
+          }
+      ]
     },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
-    manifest_items: [
-      {
-        name: "Black Sneakers",
-        quantity: 1,
-        size: "xlarge", // to trigger a 4W: >10 small or >4 medium or >1 large  
-      }
-    ],
+    return_verification:{
+      picture:true,
+      barcodes:[
+         {
+            type:"QR",
+            value:"122786607478-1"
+         }
+      ]
+   },
+   manifest_items: [
+    {
+      name: "Black Sneakers",
+      quantity: 1,
+      dimensions:{
+          length:37,
+          height:30,
+          depth:18
+       },
+       weight:2750 
+    },
+    {
+      name: "White Sneakers",
+      quantity: 1,
+      dimensions:{
+          length:37,
+          height:30,
+          depth:18
+       },
+       weight:2750
+    }
+  ],
     manifest_reference: "REF0000001",
-    manifest_total_value: 5000 // Must be in cents
+    manifest_total_value: 5000, // Must be in cents
+    pickup_ready_dt:"2024-12-13T18:30:00.470Z",
+    pickup_deadline_dt:"2024-12-13T19:30:00.470Z",
+    dropoff_ready_dt:"2024-12-13T18:30:00.470Z",
+    dropoff_deadline_dt:"2024-12-13T22:30:00.470Z"
   };
   return deliveriesClient.createDelivery(deliveryRequest);
 })

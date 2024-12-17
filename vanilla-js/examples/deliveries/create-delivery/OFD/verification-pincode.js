@@ -13,6 +13,8 @@ getAccessToken()
       zip_code: "94105",
       country: "US",
     }),
+    pickup_latitude: 37.79162, 
+    pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
     external_store_id: "myStore123",
@@ -24,6 +26,8 @@ getAccessToken()
       zip_code: "94103",
       country: "US",
     }),
+    dropoff_latitude: 40.7727076,
+    dropoff_longitude: -73.9839082,
     dropoff_notes: "apt 45",
     dropoff_phone_number: "+14155551212", // e164 format
     deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
@@ -40,7 +44,7 @@ getAccessToken()
         size: "medium",
       },
     ],
-    manifest_reference: "REF00000",
+    manifest_reference: "REF000001",
     manifest_total_value: 1000, // Must be in cents
     pickup_verification: {
       picture: true,

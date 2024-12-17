@@ -29,8 +29,8 @@ getAccessToken()
       zip_code: "94103",
       country: "US",
     }),
-    dropoff_latitude: 40.7727076,
-    dropoff_longitude: -73.9839082,
+    pickup_latitude: 37.79162, 
+    pickup_longitude: -122.39814,
     dropoff_notes: "apt 45",
     dropoff_phone_number: "+14155551212", // e164 format
     deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door

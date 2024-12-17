@@ -13,6 +13,8 @@ getAccessToken()
       zip_code: "94105",
       country: "US",
     }),
+    pickup_latitude: 37.79162, 
+    pickup_longitude: -122.39814,
     pickup_verification: {
       picture: true,
     },
@@ -27,6 +29,8 @@ getAccessToken()
       zip_code: "94103",
       country: "US",
     }),
+    dropoff_latitude: 40.7727076,
+    dropoff_longitude: -73.9839082,
     dropoff_verification: {
       picture: true,
     },
@@ -40,7 +44,7 @@ getAccessToken()
           size: "large", 
         }
     ],
-    manifest_reference: "REF000000",
+    manifest_reference: "REF0000001",
     manifest_total_value: 1000, // Must be in cents
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
     return_verification: {

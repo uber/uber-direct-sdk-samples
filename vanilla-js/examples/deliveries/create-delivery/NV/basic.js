@@ -13,8 +13,8 @@ getAccessToken()
       zip_code: "94105",
       country: "US",
     }),
-    pickup_latitude: 40.7066745,
-    pickup_longitude: -74.0071976,
+    pickup_latitude: 37.79162, 
+    pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
     external_store_id: "myStore123",
@@ -48,7 +48,7 @@ getAccessToken()
         size: "large", // to trigger a 4W: >10 small or >4 medium or >1 large  
       }
     ],
-    manifest_reference: "REF0000001",
+    manifest_reference: "REF00000011",
     manifest_total_value: 5000 // Must be in cents
   };
   return deliveriesClient.createDelivery(deliveryRequest);
