@@ -41,19 +41,19 @@ getAccessToken()
       },
       identification: {
         min_age: 21,
-        no_sobriety_check: false // Possible values: true or false
+        no_sobriety_check: true // Possible values: true or false
       },
     },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
     manifest_items: [
       {
-        name: "Chilean Wine",
+        name: "Cigarettes",
         quantity: 2,
-        size: "medium",
+        size: "small",
       }
     ],
     manifest_reference: "REF0000001",
-    manifest_total_value: 5000 // Must be in cents
+    manifest_total_value: 1500 // Must be in cents
   };
   return deliveriesClient.createDelivery(deliveryRequest);
 })

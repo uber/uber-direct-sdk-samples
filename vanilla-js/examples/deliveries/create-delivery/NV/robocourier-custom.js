@@ -39,21 +39,27 @@ getAccessToken()
         enabled: true,
         type: "random"
       },
-      identification: {
-        min_age: 21,
-        no_sobriety_check: false // Possible values: true or false
-      },
     },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
     manifest_items: [
       {
-        name: "Chilean Wine",
-        quantity: 2,
+        name: "Black Sneakers",
+        quantity: 1,
         size: "medium",
       }
     ],
     manifest_reference: "REF0000001",
-    manifest_total_value: 5000 // Must be in cents
+    manifest_total_value: 5000, // Must be in cents
+    test_specifications: {
+      robo_courier_specification: {
+        mode: "custom",
+        enroute_for_pickup_at: "2024-12-16T05:05:01Z",
+        pickup_imminent_at: "2024-12-16T05:06:03Z",
+        pickup_at: "2024-12-16T05:07:01Z",
+        dropoff_imminent_at: "2024-12-16T05:08:01Z",
+        dropoff_at: "2024-12-16T05:08:01Z"
+      } 
+    },
   };
   return deliveriesClient.createDelivery(deliveryRequest);
 })

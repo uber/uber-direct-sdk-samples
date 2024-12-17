@@ -39,20 +39,17 @@ getAccessToken()
         enabled: true,
         type: "random"
       },
-      identification: {
-        min_age: 21,
-        no_sobriety_check: false // Possible values: true or false
-      },
     },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
     manifest_items: [
       {
-        name: "Chilean Wine",
-        quantity: 2,
-        size: "medium",
+        name: "Black Sneakers",
+        quantity: 1,
+        size: "large", // to trigger a 4W: >10 small or >4 medium or >1 large  
       }
     ],
     manifest_reference: "REF0000001",
+    idempotency_key: "REF0000001-1", // This key persists for a set time frame, defaulting to 60 minutes.
     manifest_total_value: 5000 // Must be in cents
   };
   return deliveriesClient.createDelivery(deliveryRequest);
