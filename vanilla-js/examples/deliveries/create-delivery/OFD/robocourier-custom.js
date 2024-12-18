@@ -48,7 +48,7 @@ getAccessToken()
         size: "medium",
       }
     ],
-    manifest_reference: "REF0000001",
+    manifest_reference: "REF0000001", // This detail will be visible within the courier app.
     manifest_total_value: 1000, // Must be in cents
     test_specifications: {
       robo_courier_specification: {

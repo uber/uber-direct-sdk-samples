@@ -17,7 +17,7 @@ getAccessToken()
     pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
-    external_store_id: "myStore123",
+    external_store_id: "myStore123", // Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
     dropoff_name: "Customer Name",
     dropoff_address: JSON.stringify({
       street_address: ["201 3rd St"],
@@ -44,7 +44,7 @@ getAccessToken()
         size: "medium",
       },
     ],
-    manifest_reference: "REF000001",
+    manifest_reference: "REF000001", // This detail will be visible within the courier app.
     manifest_total_value: 1000, // Must be in cents
     pickup_verification: {
       picture: true,
