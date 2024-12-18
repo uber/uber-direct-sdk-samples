@@ -111,24 +111,4 @@ examples:
       This script demonstrates how to create a delivery in a organization (i.e: Aggregators with more that one organization)
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
-  deliveries-create-delivery-verification:
-    filename: "./examples/deliveries/create-delivery/verifications-basic.js"
-    title: "Deliveries: Create Delivery with a verification in 2-waypoint"
-    description: |
-      This script demonstrates how to create a delivery in a organization using a basic verification in pickup and dropoff
-
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
-  deliveries-create-delivery-verification-pincode:
-    filename: "./examples/deliveries/create-delivery/verifications-pincode.js"
-    title: "Deliveries: Create Delivery with a pincode verification at dropoff"
-    description: |
-      This script demonstrates how to create a delivery using a pincode verification at dropoff
-
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
-  deliveries-create-delivery-windows:
-    filename: "./examples/deliveries/create-delivery/delivery-windows-preptime.js"
-    title: "Deliveries: Create Delivery with pickup & dropoff windows"
-    description: |
-      This script demonstrates how to create a delivery using pickup & dropoff windows with 15min of preptime
-
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
+  

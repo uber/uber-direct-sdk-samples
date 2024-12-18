@@ -17,7 +17,7 @@ getAccessToken()
     pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
-    external_store_id: "myStore123",
+    external_store_id: "myStore123", // Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
     pickup_verification: {
       barcodes:[
          {
@@ -92,8 +92,9 @@ getAccessToken()
          weight:2750
       }
     ],
-    manifest_reference: "REF0000001",
+    manifest_reference: "REF0000001", // This detail will be visible within the courier app.
     manifest_total_value: 5000, // Must be in cents
+    //Hyperbatching windows minimum configuration: pickup window 1h + dropoff window 4h 
     pickup_ready_dt:"2024-12-13T18:30:00.470Z",
     pickup_deadline_dt:"2024-12-13T19:30:00.470Z",
     dropoff_ready_dt:"2024-12-13T18:30:00.470Z",

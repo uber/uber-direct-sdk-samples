@@ -15,12 +15,12 @@ getAccessToken()
     }),
     pickup_latitude: 37.79162, 
     pickup_longitude: -122.39814,
-    pickup_verification: {
-      picture: true,
-    },
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
-    external_store_id: "myStore123",
+    external_store_id: "myStore123", // Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
+    pickup_verification: {
+      picture: true
+    },
     dropoff_name: "Customer Name",
     dropoff_address: JSON.stringify({
       street_address: ["201 3rd St"],
@@ -31,26 +31,29 @@ getAccessToken()
     }),
     dropoff_latitude: 40.7727076,
     dropoff_longitude: -73.9839082,
-    dropoff_verification: {
-      picture: true,
-    },
     dropoff_notes: "apt 45",
     dropoff_phone_number: "+14155551212", // e164 format
     deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
-      manifest_items: [
-        {
-          name: "Black Sneakers",
-          quantity: 1,
-          size: "large", 
-        }
-    ],
-    manifest_reference: "REF0000001",
-    manifest_total_value: 1000, // Must be in cents
+    dropoff_verification: {
+      pincode: {
+        enabled: true,
+        type: "random"
+      },
+    },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
     return_verification: {
-      picture: true,
-    },
-    return_notes:"Please meet store members at the counter to verify the return of the order."
+      picture: true
+    },   
+    return_notes: "Please meet store members at the counter to verify the return of the order.",
+    manifest_items: [
+      {
+        name: "Black Sneakers",
+        quantity: 1,
+        size: "xlarge", // to trigger a 4W: >10 small or >4 medium or >1 large  
+      }
+    ],
+    manifest_reference: "REF0000001", // This detail will be visible within the courier app.
+    manifest_total_value: 5000 // Must be in cents
   };
   return deliveriesClient.createDelivery(deliveryRequest);
 })

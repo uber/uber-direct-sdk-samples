@@ -17,7 +17,7 @@ getAccessToken()
     pickup_longitude: -122.39814,
     pickup_notes: "Follow big green signs in the parking lot",
     pickup_phone_number: "+14155551212",
-    external_store_id: "myStore123",
+    external_store_id: "myStore123", // Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
     pickup_verification: {
       picture: true
     },
@@ -41,14 +41,21 @@ getAccessToken()
       },
     },
     undeliverable_action: "return", // Possible values: return, leave_at_door, discard
+    return_verification: {
+      pincode: {
+        enabled: true,
+        type: "random"
+      },
+    },
+    return_notes: "Please meet store members at the counter to verify the return of the order.",
     manifest_items: [
       {
         name: "Black Sneakers",
         quantity: 1,
-        size: "xlarge", // to trigger a 4W: >10 small or >4 medium or >1 large  
+        size: "large", // to trigger a 4W: >10 small or >4 medium or >1 large  
       }
     ],
-    manifest_reference: "REF00000019",
+    manifest_reference: "REF0000001", // This detail will be visible within the courier app.
     manifest_total_value: 5000 // Must be in cents
   };
   return deliveriesClient.createDelivery(deliveryRequest);
