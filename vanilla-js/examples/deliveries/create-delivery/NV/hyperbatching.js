@@ -82,6 +82,7 @@ getAccessToken()
   ],
     manifest_reference: "REF0000001", // This detail will be visible within the courier app.
     manifest_total_value: 5000, // Must be in cents
+    //Hyperbatching windows minimum configuration: pickup window 1h + dropoff window 4h 
     pickup_ready_dt:"2024-12-13T18:30:00.470Z",
     pickup_deadline_dt:"2024-12-13T19:30:00.470Z",
     dropoff_ready_dt:"2024-12-13T18:30:00.470Z",

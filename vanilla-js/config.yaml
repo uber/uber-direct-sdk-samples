@@ -97,13 +97,7 @@ examples:
       This script demonstrates how to update one delivery
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Delivery/paths/~1customers~1%7Bcustomer_id%7D~1deliveries~1%7Bdelivery_id%7D~1proof-of-delivery/post
-  deliveries-create-delivery:
-    filename: "./examples/deliveries/create-delivery/basic.js"
-    title: "Deliveries: Create Delivery"
-    description: |
-      This script demonstrates how to create a basic delivery in an account level
 
-      See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
   deliveries-create-delivery-org:
     filename: "./examples/deliveries/create-delivery/basic-org.js"
     title: "Deliveries: Create Delivery in a organization level"
@@ -111,4 +105,118 @@ examples:
       This script demonstrates how to create a delivery in a organization (i.e: Aggregators with more that one organization)
 
       See our docs for more info: https://developer.uber.com/docs/deliveries/api-reference/daas#tag/Quotes/paths/~1customers~1%7Bcustomer_id%7D~1delivery_quotes/post
-  
+  deliveries-create-delivery:
+    filename: "./examples/deliveries/create-delivery/basic.js"
+    title: "Deliveries: Create Delivery"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  deliveries-create-delivery-org:
+    filename: "./examples/deliveries/create-delivery/basic-org.js"
+    title: "Deliveries: Create Delivery whithin an organization"
+    description: |
+      This script demonstrates how to create a basic delivery in an organization level
+  ofd-deliveries-create-delivery:
+    filename: "./examples/deliveries/create-delivery/OFD/basic.js"
+    title: "Deliveries: Create Delivery"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level complying with gold standars for Online Food Deliveries (OFD)
+  ofd-deliveries-create-delivery-4W:
+    filename: "./examples/deliveries/create-delivery/OFD/basic-4W.js"
+    title: "Deliveries: Create Delivery 4-Wheels"
+    description: |
+      This script demonstrates how to create a delivery using item aware dispatch to request a 4-wheel courier in an account level complying with gold standars for Online Food Deliveries (OFD)
+  ofd-deliveries-create-delivery-dedupe:
+    filename: "./examples/deliveries/create-delivery/OFD/dedupe-orders.js"
+    title: "Deliveries: Create Delivery Dedupe Orders"
+    description: |
+      This script demonstrates how to create a delivery in an account level using idempotency_key for dedupe orders
+  ofd-deliveries-create-delivery-preptime:
+    filename: "./examples/deliveries/create-delivery/OFD/delivery-windows-preptime.js"
+    title: "Deliveries: Create Delivery Prep time"
+    description: |
+      This script demonstrates how to create a delivery in an account level for a restaurant that needs a preptime between the creation of the order and the arrival of the courier
+  ofd-deliveries-create-delivery-hv:
+    filename: "./examples/deliveries/create-delivery/OFD/high-value-items.js"
+    title: "Deliveries: Create Delivery High Value Items"
+    description: |
+      This script demonstrates how to create a delivery in an account level for an order with high value items 
+  ofd-deliveries-create-delivery-restricted:
+    filename: "./examples/deliveries/create-delivery/OFD/restricted-items.js"
+    title: "Deliveries: Create Delivery Restricted Items"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level for an order with restricted items such as alcohol
+  ofd-deliveries-create-delivery-robocourier:
+    filename: "./examples/deliveries/create-delivery/OFD/robocourier.js"
+    title: "Deliveries: Create Delivery using Robocourier"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level using our robocourier to simulate the different status in an order 
+  ofd-deliveries-create-delivery-schedule:
+    filename: "./examples/deliveries/create-delivery/OFD/scheduled-delivery.js"
+    title: "Deliveries: Create Delivery Schedule Delivery"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level using dropoff windows to deliver a future order
+  ofd-deliveries-create-delivery-pincode:
+    filename: "./examples/deliveries/create-delivery/OFD/verification-pincode.js"
+    title: "Deliveries: Create Delivery Verification pincode"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level using pincode in the 3-waypoints of an order
+  nv-deliveries-create-delivery:
+    filename: "./examples/deliveries/create-delivery/NV/basic.js"
+    title: "Deliveries: Create Delivery"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-4W:
+    filename: "./examples/deliveries/create-delivery/NV/basic-4W.js"
+    title: "Deliveries: Create Delivery using 4-Wheel"
+    description: |
+      This script demonstrates how to create a delivery using item aware dispatch to request a 4-wheel courier in an account level complying with gold standars for Retail, Groceries or Pharmacies stores (NV)
+  nv-deliveries-create-delivery-return:
+    filename: "./examples/deliveries/create-delivery/NV/basic-return.js"
+    title: "Deliveries: Create Delivery Return Trip"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level using basic return trip configurations
+  nv-deliveries-create-delivery-dedupe:
+    filename: "./examples/deliveries/create-delivery/NV/dedupe-order.js"
+    title: "Deliveries: Create Delivery Dedupe Order"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-hv:
+    filename: "./examples/deliveries/create-delivery/NV/high-value-items.js"
+    title: "Deliveries: Create Delivery Hihg Value Items"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-hyperbatching:
+    filename: "./examples/deliveries/create-delivery/NV/hyperbatching  .js"
+    title: "Deliveries: Create Delivery Hyperbatching"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-hyperbatching-barcodes:
+    filename: "./examples/deliveries/create-delivery/NV/hyperbatching-multiple-barcode.js"
+    title: "Deliveries: Create Delivery Hyperbatching multiple barcodes"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-restricted:
+    filename: "./examples/deliveries/create-delivery/NV/restricted-items.js"
+    title: "Deliveries: Create Delivery Restricted Items"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-robocourier:
+    filename: "./examples/deliveries/create-delivery/NV/robocourier.js"
+    title: "Deliveries: Create Delivery Robocourier"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-schedule-oed:
+    filename: "./examples/deliveries/create-delivery/NV/schedule-delivery-eod.js"
+    title: "Deliveries: Create Delivery for End of Day"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-schedule-nd:
+    filename: "./examples/deliveries/create-delivery/NV/schedule-delivery-next-day.js"
+    title: "Deliveries: Create Delivery for Next Day"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level
+  nv-deliveries-create-delivery-verification-return:
+    filename: "./examples/deliveries/create-delivery/NV/verification-return.js"
+    title: "Deliveries: Create Delivery"
+    description: |
+      This script demonstrates how to create a basic delivery in an account level

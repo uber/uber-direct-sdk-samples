@@ -33,14 +33,14 @@ getAccessToken()
     dropoff_longitude: -73.9839082,
     dropoff_notes: "apt 45",
     dropoff_phone_number: "+14155551212", // e164 format
-    deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
+    deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door. Do not use deliverable_action_leave_at_door for high value orders
     dropoff_verification: {
       pincode: {
         enabled: true,
         type: "random"
       },
     },
-    undeliverable_action: "return", // Possible values: return, leave_at_door, discard
+    undeliverable_action: "return", // Possible values: return, leave_at_door, discard. Use only return for high value orders
     return_notes:"Please meet store members at the counter to verify the return of the order.",
     return_verification: {
       pincode: {
