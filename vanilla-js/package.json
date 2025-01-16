@@ -1,5 +1,5 @@
 {
-  "name": "uber-direct-js-sdk-examples",
+  "name": "@uber/uber-direct-js-sdk-examples",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
