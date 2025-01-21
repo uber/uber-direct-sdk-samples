@@ -51,14 +51,14 @@ getAccessToken()
     manifest_reference: "REF0000001", // This detail will be visible within the courier app.
     manifest_total_value: 1000, // Must be in cents
     test_specifications: {
-      robo_courier_specification: {
-        mode: "custom",
-        enroute_for_pickup_at: "2024-12-16T05:05:01Z",
-        pickup_imminent_at: "2024-12-16T05:06:03Z",
-        pickup_at: "2024-12-16T05:07:01Z",
-        dropoff_imminent_at: "2024-12-16T05:08:01Z",
-        dropoff_at: "2024-12-16T05:08:01Z"
-      } 
+      robo_courier_specification:{
+        mode:"custom",
+        enroute_for_pickup_at:"2025-01-21T14:45:00Z",
+        pickup_imminent_at:"2025-01-21T14:45:30Z",
+        pickup_at:"2025-01-21T14:46:00Z",
+        dropoff_imminent_at:"2025-01-21T14:46:30Z",
+        dropoff_at:"2025-01-21T14:47:00Z"
+     }
     },
   };
   return deliveriesClient.createDelivery(deliveryRequest);
