@@ -4,7 +4,6 @@ import { createDeliveriesClient } from 'uber-direct/deliveries';
 getAccessToken()
   .then((token) => {
     const deliveriesClient = createDeliveriesClient(token);
-
     const quoteReq = {
       pickup_address: JSON.stringify({
         street_address: ['425 Market St'],
@@ -20,9 +19,10 @@ getAccessToken()
         zip_code: '94103',
         country: 'US',
       }),
+      external_store_id: "myStore123",// Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
     };
 
-    return deliveriesClient.createQuote(quoteReq);
+    return deliveriesClient.createQuote(quoteReq); // Make sure to save the quote_id, an if a identical quote is necessary within 15min use the information saved
   })
   .then((quote) => {
     console.log(`Your delivery quote ID is: ${quote.id}`);

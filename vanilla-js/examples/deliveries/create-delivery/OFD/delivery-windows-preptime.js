@@ -3,8 +3,6 @@ import { createDeliveriesClient } from "uber-direct/deliveries";
 
 let now = new Date();
 let prepTime = new Date(now.getTime() + 15 * 60000); // Preptime 15min
-let deliveryPromise = new Date(now.getTime() + 60 * 60000); // Delivery time 60min
-
 getAccessToken()
   .then((token) => {
     const deliveriesClient = createDeliveriesClient(token);
@@ -17,9 +15,15 @@ getAccessToken()
         zip_code: "94105",
         country: "US",
       }),
+      pickup_latitude: 37.79162, 
+      pickup_longitude: -122.39814,
       pickup_notes: "Follow big green signs in the parking lot",
       pickup_phone_number: "+14155551212",
-      external_store_id: "myStore123",
+      external_store_id: "myStore123", // Please be aware that if you utilize this field in the Create Delivery process, you MUST also include it in your Create Quote API calls.
+      pickup_verification: {
+        picture: true
+      },
+      pickup_ready_dt: prepTime.toISOString(), //15min of preptime, this means we will have a courier picking the order 15min after the creation of the order
       dropoff_name: "Customer Name",
       dropoff_address: JSON.stringify({
         street_address: ["201 3rd St"],
@@ -28,42 +32,27 @@ getAccessToken()
         zip_code: "94103",
         country: "US",
       }),
+      dropoff_latitude: 40.7727076,
+      dropoff_longitude: -73.9839082,
       dropoff_notes: "apt 45",
-      dropoff_phone_number: "+14155551212",
-      deliverable_action: "deliverable_action_meet_at_door",
-      undeliverable_action: "return",
+      dropoff_phone_number: "+14155551212", // e164 format
+      deliverable_action: "deliverable_action_meet_at_door", // Happy path. Possible values: deliverable_action_meet_at_door, deliverable_action_leave_at_door
+      dropoff_verification: {
+        pincode: {
+          enabled: true,
+          type: "random"
+        },
+      },
+      undeliverable_action: "discard", // Possible values: return, leave_at_door, discard
       manifest_items: [
         {
-          name: "iPhone",
-          quantity: 1,
-          size: "small",
-        },
-        {
-          name: "iPad",
+          name: "Pepperonni Pizza",
           quantity: 1,
           size: "medium",
-        },
+        }
       ],
-      manifest_reference: "REF000000",
-      manifest_total_value: 1000,
-      pickup_verification: {
-        picture: true,
-      },
-      dropoff_verification: {
-        picture: true,
-      },
-      return_verification: {
-        picture: true,
-      },
-      pickup_ready_dt: prepTime.toISOString(),
-      pickup_deadline_dt: deliveryPromise.toISOString(),
-      dropoff_ready_dt: prepTime.toISOString(),
-      dropoff_deadline_dt: deliveryPromise.toISOString(),
-      test_specifications: {
-        robo_courier_specification: {
-          mode: "auto",
-        },
-      },
+      manifest_reference: "REF0000001", // This detail will be visible within the courier app.
+      manifest_total_value: 1000 // Must be in cents
     };
     
     return deliveriesClient.createDelivery(deliveryRequest);
